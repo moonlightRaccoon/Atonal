@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+ <link rel="stylesheet" href="lib/swiper-bundle.min.css">
+
+<style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+            background-color: black;
+
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+  </style>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="assets/Jake_Bugg_Shangri_La.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+    <script type="text/javascript" src="lib/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+	  effect: "coverflow",
+          slidesPerGroup: 1, 
+    slidesPerView: 1,
+    grabCursor: true,
+    spaceBetween: -16,
+    autoHeight: false,
+    preloadImages: true,
+    loop: true,
+    createElements: false,
+    centeredSlides: true,
+    coverflowEffect: {
+      scale: 1,
+      stretch: 0,
+      depth: 200,
+      modifier: 0.75,
+      slideShadows: true,
+    },
+    // Enable lazy loading
+    lazy: false,
+    /*
+    navigation: {
+      nextEl: '.arrow-next',
+      prevEl: '.arrow-previous',
+    },
+    */
+    keyboard: {
+      enabled: true,
+    },
+    
+    breakpoints: {
+      0: { // when window >=0px - webflow mobile portriat
+        slidesPerView: 1,
+        spaceBetween: -16,
+      },
+      478: { // when window >= 478px - webflow mobile landscape
+        slidesPerView: 2,
+        spaceBetween: -16,
+      },
+      767: { // when window >= 767px - webflow tablet
+        slidesPerView: 3,
+        spaceBetween: -16,
+      },
+      988: { // when window >= 988px - webflow desktop
+        slidesPerView: 4,
+        spaceBetween: -16,
+      },
+      1920: { // when window >= 988px - webflow desktop
+        slidesPerView: 5,
+        spaceBetween: -16,
+      }
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    autoplay: {
+      delay: 3000,
+    },
+    speed: 1200,
+  });
+  </script>
+</html>
